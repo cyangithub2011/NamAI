@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot AI - OpenRouter API</title>
+    <title>Nam AI (chatgpt v3.5)</title>
+
+    <meta property="og:title" content="Nam AI">
+<meta property="og:description" content="Trò chuyện với AI thông minh và nhanh chóng. Phát triển bởi Rainbows team softworks.">
+<meta property="og:image" content="https://i.postimg.cc/F73GXHLG/logo.png">
+<meta property="og:type" content="website">
     <style>
         body {
             margin: 0;
@@ -188,8 +193,8 @@
     <div class="main">
         <div class="header">
             <div style="display: flex; align-items: center;">
-                <img src="./assets/logo.png" alt="Logo">
-                <h1>AI Chatbot</h1>
+                <img src="https://i.postimg.cc/F73GXHLG/logo.png" alt="Logo">
+                <h1>Nam AI (bản thử nghiệm)</h1>
             </div>
         </div>
 
@@ -211,11 +216,11 @@
             const userText = input.value.trim();
             if (!userText) return;
 
-            chat.innerHTML += `<div class="message user"><img src="./assets/user.png"><p>${userText}</p></div>`;
+            chat.innerHTML += `<div class="message user"><img src="https://i.postimg.cc/jDTcxY6T/user.png"><p>${userText}</p></div>`;
             input.value = '';
             chat.scrollTop = chat.scrollHeight;
 
-            chat.innerHTML += `<div class="message ai" id="loading"><img src="./assets/bot.png"><p>Đang trả lời...</p></div>`;
+            chat.innerHTML += `<div class="message ai" id="loading"><img src="https://i.postimg.cc/XXTxPCpp/bot.webp"><p>Đang trả lời...</p></div>`;
             chat.scrollTop = chat.scrollHeight;
 
             try {
@@ -240,12 +245,12 @@
                     return `<pre>${code}<button class='copy-btn' onclick='copyToClipboard(this, \`${code.replace(/`/g, "\\`")}\`)'>Copy</button></pre>`;
                 });
 
-                chat.innerHTML += `<div class="message ai"><img src="./assets/bot.png"><p>${formattedReply}</p></div>`;
+                chat.innerHTML += `<div class="message ai"><img src="https://i.postimg.cc/XXTxPCpp/bot.webp"><p>${formattedReply}</p></div>`;
                 chat.scrollTop = chat.scrollHeight;
 
             } catch (err) {
                 document.getElementById('loading').remove();
-                chat.innerHTML += `<div class="message ai"><img src="./assets/bot.png"><p>Lỗi: ${err.message}</p></div>`;
+                chat.innerHTML += `<div class="message ai"><img src="https://i.postimg.cc/XXTxPCpp/bot.webp"><p>Lỗi: ${err.message}</p></div>`;
                 chat.scrollTop = chat.scrollHeight;
             }
         }
